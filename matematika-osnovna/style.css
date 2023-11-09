@@ -1,0 +1,64 @@
+/* .vece_manje{
+margin: 0,10px,0,10px;
+
+} */
+.wdth{
+    width: 25%;
+}
+
+.vece-manje{
+    width: 30%;
+}.novo-jedn{
+    margin-right: 1rem;
+}
+.veceManjeZnak{
+    width: 10%;
+}
+.parag{
+    width: 30%;
+}
+input{
+    
+    font-weight: bold;
+}
+.racTable{
+    width: 90%;
+    
+}
+body{
+    background: linear-gradient(90deg,  rgba(148,224,211,0.2847514005602241) 45%,rgba(15,237,218,1) 56%);
+ 
+}
+.jednacine{
+    border: 5px solid white;
+}
+.vece_manje{
+border-left: 5px solid white;
+border-right: 5px solid white;
+}
+table,th{
+    border: 5px ;
+}
+.tableVeceManje{
+    border: 5px ;
+}
+.lb-lg{
+    font-size: 20px;
+}
+.znak{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: blue;
+}
+.inpt{
+    width: 20%;
+    background-color: white;
+}
+.lblJedn{
+    width:10%;
+  }
+  .stil{
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+  }

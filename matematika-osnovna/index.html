@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<!-- Font awersome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <title>Matematika - Vježbe</title>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" href="../index.html">Desetice</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../Rastavljanje/index.html">Rastavljanje</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page"  href="index.html">Matematika</a>
+    </li>
+   
+  </ul>
+
+</head>
+
+<body>
+  <br>
+  <div class="container bg-primary" style="border-radius: 15px; border: 5px solid white;">
+    <br>
+    <h1 class="h1 text-white" style="text-align:center">Matematika za osnovnu školu</h1>
+    <br>
+  </div>
+<br><br>
+
+  <div class="glavni container">
+
+    <div class="row jednacine">
+      <!-- Računske operacije -->
+      <div class="container  bg-warning col-4">
+        <br>
+        <h2 class="h2 text-white" style="text-align: center;">Računanje </h2>
+        <br>
+        <input id="prvi" class=" inpt  form-control-sm " type="text" disabled>
+        <!-- <label for="" class="form-label operator" >+</label> -->
+        <select id="operator" name="" class=" form-select-sm ">
+          <option id="plus " style="color:red;background-color: blue;" value="">➕</option>
+          <option id="minus" class=" znak" value="">➖</option>
+        </select>
+
+        <input id="drugi" class=" inpt form-control-sm inpt " type="text" disabled>
+        <label for="" class="form-label" style="font-size:2em;font-weight: bolder;">=</label>
+        <input id="rez" class=" wdth form-control-sm " value="" type="text">
+        <br><br>
+        <button id="novo" class=" btn btn-primary">Novo</button>
+        <label id="lblRezZnak" for="" class=" form-label">✅</label>
+
+        <button id="btnIzracunaj" class="novo-jedn btn btn-primary">izračunaj</button>
+        <label id="lblRez" for="" class="stil form-label">✅</label>
+
+        <br><br>
+        <div class="container-fluid">
+
+          <label id="postotak" class="form-control "
+            style="color: orangered; font-size: 1.1em;width: 90%;font-weight: bold;">Ocjena je: </label>
+          <br>
+          <button style="margin-left:36.7%" id="btnIzrProc" class=" novo-jedn btn btn-primary">Ocjena</button>
+        </div>
+
+
+
+        <br><br><br>
+      </div>
+      <!-- Veće Manje -->
+      <div class="vece_manje col-4 bg-info">
+        <br>
+        <h2 class="h2 text-white" style="text-align: center;">Veće Manje</h2>
+        <br><br>
+
+        <input id="prviVeceManje" class="vece-manje vece-manje form-control-sm inpt" style="width: 30%;" type="text"
+          disabled>
+        <input id="veceManjeZnak" class="vece-manje form-control-sm " type="text">
+        <input id="drugiVeceManje" class=" vece-manje form-control-sm inpt" style="width: 30%" type="text" disabled>
+        <br><br>
+        <button id="novo-vece-manje" class=" btn btn-primary">Novo</button>
+        <label id="lblVeceManjeZnak" for="" class=" form-label">✅</label>
+        <button id="btnPrikaziVeceManje" class=" novo btn btn-primary">Prikaži</button>
+        <label for="" id="lblVeceManje" class="stil form-label">✅</label>
+
+        <br><br>
+
+        <label id="postotakVeceManje" class="form-control "
+          style="color: orangered; font-size: 1.1em;width: 70%;font-weight: bold;">Ocjena je:</label>
+        <br>
+        <button style="margin-left:23.7%" class="btn btn-primary" id="procVm">Ocjena</button>
+      </div>
+
+
+      <!-- Jednačine -->
+
+      <div class="col-4 bg-danger">
+        <br>
+        <h2 class="h2 text-white" style="text-align: center;">Jednačine</h2>
+        <br>
+        <!-- Gornji -->
+        <input for="" class="form-control-sm lblJedn" value="✖"
+          style="text-align: center;font-size: 0.8em;background-color: white;" disabled>
+        <!-- <label for="" class="form-label operator" >+</label> -->
+        <select name="" id="operatorJednGor" class=" form-select-sm mb-1">
+          <option class="plus" value="" ">➕</option>
+          <option class=" minus" value="">➖</option>
+        </select>
+
+        <input for="" class="form-control-sm " id="drugiJednGor" value="0"
+          style="text-align: center;font-size: 0.8em;background-color: white;width: 6em;font-size: 0.8em;" disabled>
+        <label for="" class="form-label" style="font-size:2em;font-weight: bolder;color: white;">=</label>
+        <input class=" wdth form-control-sm " id="rezJednGornji" type="text">
+        <br>
+
+        <input for="" class="form-control-sm lblJedn" value="✖"
+          style="text-align: center;font-size: 0.8em;background-color: white;" disabled>
+        <label for="" class="form-label" style="font-size:2em;font-weight: bolder;color: white;">=</label>
+        <input id="finalGornji" class=" wdth form-control-sm " type="text">
+        <br><br>
+        <button id="btnNovoJednGornji" class=" btn btn-primary">Novo</button>
+        <label for="" id="lblRezJednGornjiZnak" class=" form-label">✅</label>
+
+        <button id="btnIzracunajGornji" class="  btn btn-primary">izračunaj</button>
+        <label for="" id="lblRezJednGornji" class="stil form-label">✅</label>
+        <br>
+
+        <!-- Donji -->
+        <br>
+        <input for="" class="form-control-sm lblJedn " id="prviJednDonji" value="⚪"
+          style="text-align: center;font-size: 0.8em;background-color: white;" disabled>
+
+        <select name="" id="operatorJednDonji" class=" form-select-sm mb-1">
+          <option id="plus" value="">➕</option>
+          <option id="minus" value="">➖</option>
+        </select>
+
+        <input for="" class="form-control-sm lblJedn" value="✖"
+          style="text-align: center;font-size: 0.8em;background-color: white;width: 6em;font-size: 0.8em;" disabled>
+        <label for="" class="form-label" style="font-size:2em;font-weight: bolder;color: white;">=</label>
+        <input id="rezJednDonji" class="rezJednDonji wdth form-control-sm " type="text">
+        <br>
+
+        <input for="" class="form-control-sm lblJedn" value="✖"
+          style="text-align: center;font-size: 0.8em;background-color: white;" disabled>
+        <label for="" class="form-label" style="font-size:2em;font-weight: bolder;color: white;">=</label>
+        <input id="finalDonji" class=" wdth form-control-sm " type="text">
+        <br><br>
+        <button id="btnNovoJednDonji" class=" btn btn-primary">Novo</button>
+        <label for="" id="lblRezJednDonjiZnak" class=" form-label">✅</label>
+
+        <button id="btnIzracunajDonji" class=" novo-jedn btn btn-primary">izračunaj</button>
+        <label for="" id="lblRezJednDonji" class="stil form-label">✅</label>
+        <br><br>
+        <label id="postotakDonji" class="form-control "
+          style="color: orangered; font-size: 1.1em;width: 90%;font-weight: bold;">Rezultat: </label>
+        <br>
+        <button id="btnOcjena" style="margin-left: 35.8%;" class="btn btn-primary">Ocjena</button>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+  <!-- Tabela Računanje -->
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="racTable">
+          <table id="table" class="table  table-bordered border-dark ">
+            <thead>
+              <tr>
+                <th colspan="2" style="text-align: center;color:green">Rezultat Računanja</th>
+              </tr>
+              <tr>
+                <th id="index" scope="col" style="width: 4em; color: deepskyblue;text-align: center">Br</th>
+                <th scope="col" id="rezultat" style="color:deepskyblue; text-align: center">Rezultat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- Tabela Veće Manje -->
+      <div class="col-4">
+        <div class="racTable">
+          <table id="tableVeceManje" class="table  table-bordered border-dark ">
+            <thead>
+              <tr>
+                <th colspan="2" style="text-align: center;color:green">Rezultat Računanja</th>
+              </tr>
+              <tr>
+                <th id="index" scope="col" style="width: 4em; color: deepskyblue;text-align: center">Br</th>
+                <th scope="col" id="rezultat" style="color:deepskyblue; text-align: center">Rezultat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- Tabela Jednačine -->
+
+      <div class="col-4">
+        <div class="racTable">
+          <table id="tableJedn" class="table  table-bordered border-dark ">
+            <thead>
+              <tr>
+                <th colspan="2" style="text-align: center;color:green">Rezultat Računanja</th>
+              </tr>
+              <tr>
+                <th id="index" scope="col" style="width: 4em; color: deepskyblue;text-align: center">Br</th>
+                <th scope="col" id="rezultat" style="color:deepskyblue; text-align: center">Rezultat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+  <br>
+  <div class="container bg-primary" style="border-radius: 15px; border: 5px solid white;">
+    <br>
+    <h1 class="h1 text-white" style="text-align:center">Copyright by Matejko Team</h1>
+    <br>
+  </div>
+  <br><br>
+  <!-- Scripts -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  
+  <script defer src="script.js"></script>
+</body>
+
+</html>
